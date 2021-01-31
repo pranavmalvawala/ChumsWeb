@@ -1,0 +1,99 @@
+﻿body {font-family:'Lato', sans-serif; color:#333;}
+.table {color:#333;}
+a { color: #24b8ff; }
+h2 span {color:#24b8ff;}
+.blue{color:#03a9f4;}
+.green {color:#00ad25;}
+
+#navbar {background-color: #FFF !important;height:55px;margin-bottom: 20px;box-shadow: 0px 3px 3px 0px #999;}
+#navbar a.link {color:#000;font-size:14px;font-weight: bold;}
+#navbar .nav-item {font-size:14px;}
+#navbar .nav-link {color:#555;height:55px;vertical-align: middle;line-height: 45px; max-width:150px; margin-left:auto; margin-right:auto;}
+#navbar .active {border-bottom: 2px solid #03a9f4;}
+.navbar-brand {padding-top:5px;padding-bottom:0px;}
+.navbar-brand img {max-height:35px;max-width:100%;margin-top:5px;margin-bottom:5px;}
+#navRight {white-space: nowrap; overflow: hidden; padding-top: 15px;}
+#navRight .btn {margin-left:20px;}
+#navSpacer {height:57px;}
+
+.homeSection {padding-top:70px;padding-bottom: 70px;}
+.homeSection .title {font-size:14px; text-transform: uppercase;margin-bottom: 10px;color:#03a9f4;font-weight: bold;}
+.homeSection .title span {color:#03a9f4;}
+.homeSection.alt { color:#FFF; }
+.homeSection.alt .title { color:#FFF; }
+.homeSection h2 {margin-bottom: 30px; font-size:36px; font-weight: bold; }
+.homeSection ul {padding-left:0px;}
+.homeSection li {list-style: none; background: url('/images/home/checkbox.png') 0px 3px no-repeat; padding:0px 0px 15px 37px;}
+
+#hero h1 {font-weight: bold;}
+#hero h1 span {color:#03a9f4;font-style: italic;font-weight: normal;}
+#hero {padding-top:50px;padding-bottom: 50px;}
+
+#aboutSection { background-image: url('/images/home/about-bg.jpg'); background-position: center center; background-size: cover; }
+#aboutSection p {color:#b4c5ce;line-height: 30px;}
+#aboutSection b {color:#FFF;}
+#aboutSection .btn {padding-left:20px;padding-right: 20px;}
+
+.homeFeature { padding:10px;box-shadow: 0px 2px 5px  #CCC; margin-bottom: 25px; min-height: 200px; border-radius: 10px;}
+.homeFeature .icon {margin-top:5px; margin-bottom: 5px;}
+.homeFeature .icon span { border:3px solid #03a9f4; border-radius: 50%;display: inline-block;width:60px;height:60px; }
+.homeFeature .icon i { color:#00ad25; font-size: 25px; line-height: 55px; }
+.homeFeature .feature {font-weight: bold;}
+
+#membersSection { background-image: url('/images/home/members-bg.jpg'); background-position: center center; background-size: cover; }
+#membersSection img {margin-top:20px;}
+#membersSection li {color:#DDD;}
+
+#givingSection .title {margin-top:30px;}
+#testimonySection { background-image: url('/images/home/testimony-bg.jpg'); background-position: center center; background-size: cover; }
+
+#registerSection h2 {margin-bottom: 10px;}
+
+
+#attendanceSection { background-image: url('/images/home/members-bg.jpg'); background-position: center center; background-size: cover; }
+
+
+/*
+#membersSection p {color:#b4c5ce;line-height: 30px;}
+#membersSection b {color:#FFF;}
+#membersSection .btn {padding-left:20px;padding-right: 20px;}
+*/
+
+
+
+
+
+.btn-light {color:#03a9f4;}
+
+p.lead {font-size:16px;font-weight: bold;}
+
+
+.btn-primary { background-color:#77cc00; border-color:#70db86; }
+.btn-primary:hover { background-color:#55aa00; border-color:#55aa00; }
+
+.btn-info { background-color: #03a9f4; border-color: #03a9f4; }
+
+
+
+
+
+
+
+#footer {background-color:#002a3e; padding-top:40px; padding-bottom: 40px; color:#EEE;}
+#footer img {max-width:450px;margin-bottom: 20px;}
+
+
+#attendance {position: relative; z-index:-2}
+#attendance:after { content:''; background-position-y: center; background-image: url(/images/home/attendance.jpg); background-size: cover; opacity: 0.10; top: 0;left: 0;bottom: 0;right: 0;position: absolute; z-index: -1; } /*https://pixabay.com/photos/kindergarten-clown-garden-animator-2204239/*/
+
+
+
+
+@media (min-width: 600px) {
+    #navRight .btn:after {content:' for Free';}
+}
+
+
+@media (min-width: 1200px) {
+    .col-lg-2-5 {flex: 0 0 20.8%; max-width: 20.8%; position: relative; width:100%; padding-left:15px;padding-right: 15px;}
+}
