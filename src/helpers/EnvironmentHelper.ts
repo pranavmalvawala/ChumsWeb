@@ -7,6 +7,8 @@ export class EnvironmentHelper {
     private static MembershipApi = "";
     static AppUrl = "";
     static GoogleAnalyticsTag = "";
+    static AccountsAppUrl = "";
+    static ChurchAppUrl = "";
 
     static init = () => {
         switch (process.env.REACT_APP_STAGE) {
@@ -28,7 +30,9 @@ export class EnvironmentHelper {
         EnvironmentHelper.GivingApi = process.env.REACT_APP_GIVING_API || "";
         EnvironmentHelper.MembershipApi = process.env.REACT_APP_MEMBERSHIP_API || "";
         EnvironmentHelper.GoogleAnalyticsTag = process.env.REACT_APP_GOOGLE_ANALYTICS || "";
-        EnvironmentHelper.AppUrl = process.env.REACT_APP_APP_URL || ""
+        EnvironmentHelper.AppUrl = process.env.REACT_APP_APP_URL || "";
+        EnvironmentHelper.AccountsAppUrl = process.env.REACT_APP_ACCOUNTS_APP_URL || "";
+        EnvironmentHelper.ChurchAppUrl = process.env.REACT_APP_CHURCH_APPS_URL || "";
     }
 
     //NOTE: None of these values are secret.
@@ -39,7 +43,9 @@ export class EnvironmentHelper {
         EnvironmentHelper.MembershipApi = "https://membershipapi.staging.churchapps.org";
         EnvironmentHelper.AppUrl = "https://app.staging.chums.org"
         EnvironmentHelper.GoogleAnalyticsTag = "";
-        EnvironmentHelper.AppUrl = "https://app.staging.chums.org"
+        EnvironmentHelper.AppUrl = "https://app.staging.chums.org";
+        EnvironmentHelper.AccountsAppUrl = "https://accounts.staging.churchapps.org";
+        EnvironmentHelper.ChurchAppUrl = "https://staging.churchapps.org";
     }
 
     //NOTE: None of these values are secret.
@@ -51,6 +57,8 @@ export class EnvironmentHelper {
         EnvironmentHelper.AppUrl = "https://app.chums.org"
         EnvironmentHelper.GoogleAnalyticsTag = "UA-164774603-4";
         EnvironmentHelper.AppUrl = "https://app.chums.org"
+        EnvironmentHelper.AccountsAppUrl = "https://accounts.churchapps.org";
+        EnvironmentHelper.ChurchAppUrl = "https://churchapps.org";
     }
 
 }
