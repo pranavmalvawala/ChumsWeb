@@ -8,7 +8,7 @@ export const HomeRegister: React.FC = () => {
     const [processing, setProcessing] = React.useState(false);
     const [firstName, setFirstName] = React.useState("");
     const [lastName, setLastName] = React.useState("");
-    const [errors, setErrors] = React.useState<string[]>([]);
+    const [errors, setErrors] = React.useState([]);
     const [redirectUrl, setRedirectUrl] = React.useState("");
 
     const validateEmail = (email: string) => { return (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(email)); }
@@ -34,6 +34,17 @@ export const HomeRegister: React.FC = () => {
         if (validate()) {
             setProcessing(true);
             btn.innerHTML = "Registering. Please wait...";
+            // check if user already exist and if so, return user's associated churches
+            const verifyResponse = await ApiHelper.postAnonymous("/users/verifyCredentials", {email: register.email, password: register.password}, "AccessApi");
+            if (verifyResponse.errors !== undefined || verifyResponse.churches !== undefined) {
+                const errorMessage = <>There is already an account with this email address, please <a href={EnvironmentHelper.AccountsAppUrl}>login</a> to manage your churches and apps. If you wish to create a new church with this email, please register from <a href={EnvironmentHelper.ChurchAppUrl}>ChurchApps</a></>;
+                setErrors([errorMessage]);
+
+                btn.innerHTML = "Register"
+                btn.removeAttribute("disabled");
+                setProcessing(false);
+                return;
+            }
             const loginResp = await createAccess();
             if (loginResp != null) {
                 btn.innerHTML = "Configuring...";
