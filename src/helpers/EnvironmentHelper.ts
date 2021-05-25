@@ -30,7 +30,7 @@ export class EnvironmentHelper {
         EnvironmentHelper.GivingApi = process.env.REACT_APP_GIVING_API || "";
         EnvironmentHelper.MembershipApi = process.env.REACT_APP_MEMBERSHIP_API || "";
         EnvironmentHelper.GoogleAnalyticsTag = process.env.REACT_APP_GOOGLE_ANALYTICS || "";
-        EnvironmentHelper.AppUrl = process.env.REACT_APP_APP_URL || "";
+        EnvironmentHelper.AppUrl = process.env.REACT_APP_CHUMS_URL || "";
         EnvironmentHelper.AccountsAppUrl = process.env.REACT_APP_ACCOUNTS_APP_URL || "";
         EnvironmentHelper.ChurchAppUrl = process.env.REACT_APP_CHURCH_APPS_URL || "";
     }
