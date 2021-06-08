@@ -11,21 +11,19 @@ import { HomeAttendance } from "./components/HomeAttendance";
 import { HomeExport } from "./components/HomeExport";
 import { HomeTestimony } from "./components/HomeTestimony";
 
-export const Home = () => {
-    return (
-        <>
-            <Header />
-            <HomeHero />
-            <HomeAbout />
-            <HomeFeatures />
-            <HomeMembers />
-            <HomeGiving />
-            <HomeAttendance />
-            <HomeExport />
-            <HomeTestimony />
+export const Home = () => (
+  <>
+    <Header />
+    <HomeHero />
+    <HomeAbout />
+    <HomeFeatures />
+    <HomeMembers />
+    <HomeGiving />
+    <HomeAttendance />
+    <HomeExport />
+    <HomeTestimony />
 
-            <HomeRegister />
-            <Footer />
-        </>
-    );
-}
+    <HomeRegister />
+    <Footer />
+  </>
+)
