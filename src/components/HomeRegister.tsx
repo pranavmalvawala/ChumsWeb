@@ -103,11 +103,11 @@ export const HomeRegister: React.FC = () => {
     const val = e.currentTarget.value;
     let r = { ...register };
     switch (e.currentTarget.name) {
-    case "churchName": r.churchName = val; break;
-    case "firstName": setFirstName(val); break;
-    case "lastName": setLastName(val); break;
-    case "email": r.email = val; break;
-    case "password": r.password = val; break;
+      case "churchName": r.churchName = val; break;
+      case "firstName": setFirstName(val); break;
+      case "lastName": setLastName(val); break;
+      case "email": r.email = val; break;
+      case "password": r.password = val; break;
     }
     setRegister(r);
   }
