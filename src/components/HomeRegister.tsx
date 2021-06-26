@@ -1,6 +1,7 @@
 import React from "react";
 import { ApiHelper, RegisterInterface, LoginResponseInterface, ErrorMessages, EnvironmentHelper } from ".";
 import { Row, Col, Container, Button } from "react-bootstrap"
+import { PersonInterface } from "../helpers/Interfaces";
 
 export const HomeRegister: React.FC = () => {
 
@@ -48,8 +49,9 @@ export const HomeRegister: React.FC = () => {
       const loginResp = await createAccess();
       if (loginResp != null) {
         btn.innerHTML = "Configuring...";
+        const { person }: { person: PersonInterface} = await ApiHelper.post("/churches/init", { user: loginResp.user }, "MembershipApi");
         const promises: Promise<any>[] = [];
-        promises.push(ApiHelper.post("/churches/init", { user: loginResp.user }, "MembershipApi"));
+        promises.push(ApiHelper.post("/userchurch", { personId: person.id }, "AccessApi"));
         promises.push(ApiHelper.post("/churches/init", [], "AttendanceApi"));
         promises.push(ApiHelper.post("/churches/init", [], "GivingApi"));
         let responses = await Promise.all(promises);
