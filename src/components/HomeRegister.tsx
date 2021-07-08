@@ -5,10 +5,8 @@ import { PersonInterface } from "../helpers/Interfaces";
 
 export const HomeRegister: React.FC = () => {
 
-  const [register, setRegister] = React.useState<RegisterInterface>({ churchName: "", displayName: "", password: "", email: "" });
+  const [register, setRegister] = React.useState<RegisterInterface>({ churchName: "", firstName: "", lastName: "", password: "", email: "" });
   const [processing, setProcessing] = React.useState(false);
-  const [firstName, setFirstName] = React.useState("");
-  const [lastName, setLastName] = React.useState("");
   const [errors, setErrors] = React.useState([]);
   const [redirectUrl, setRedirectUrl] = React.useState("");
 
@@ -17,8 +15,8 @@ export const HomeRegister: React.FC = () => {
   const validate = () => {
     let errors: string[] = [];
     if (register.churchName === "") errors.push("Please enter your church name.")
-    if (firstName === "") errors.push("Please enter your first name.")
-    if (lastName === "") errors.push("Please enter your last name.")
+    if (register.firstName === "") errors.push("Please enter your first name.")
+    if (register.lastName === "") errors.push("Please enter your last name.")
     if (register.password === "") errors.push("Please enter a password.");
     else if (register.password.length < 6) errors.push("Passwords must be at least 6 characters.");
     if (register.email === "") errors.push("Please enter your email address.");
@@ -71,8 +69,6 @@ export const HomeRegister: React.FC = () => {
   }
 
   const createAccess = async () => {
-    register.displayName = firstName + " " + lastName;
-
     let resp: LoginResponseInterface = await ApiHelper.postAnonymous("/churches/register", register, "AccessApi");
     if (resp.errors !== undefined) { setErrors(resp.errors); return null; }
     else {
@@ -106,8 +102,8 @@ export const HomeRegister: React.FC = () => {
     let r = { ...register };
     switch (e.currentTarget.name) {
       case "churchName": r.churchName = val; break;
-      case "firstName": setFirstName(val); break;
-      case "lastName": setLastName(val); break;
+      case "firstName": r.firstName = val; break;
+      case "lastName": r.lastName = val; break;
       case "email": r.email = val; break;
       case "password": r.password = val; break;
     }
@@ -134,10 +130,10 @@ export const HomeRegister: React.FC = () => {
               </div>
 
               <div className="form-group">
-                <input type="text" className="form-control" placeholder="First Name" name="firstName" value={firstName} onChange={handleChange} />
+                <input type="text" className="form-control" placeholder="First Name" name="firstName" value={register.firstName} onChange={handleChange} />
               </div>
               <div className="form-group">
-                <input type="text" className="form-control" placeholder="Last Name" name="lastName" value={lastName} onChange={handleChange} />
+                <input type="text" className="form-control" placeholder="Last Name" name="lastName" value={register.lastName} onChange={handleChange} />
               </div>
 
               <div className="form-group">
