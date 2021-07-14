@@ -1,5 +1,5 @@
 import React from "react";
-import { ApiHelper, RegisterInterface, LoginResponseInterface, ErrorMessages, EnvironmentHelper } from ".";
+import { ApiHelper, RegisterInterface, LoginResponseInterface, ErrorMessages, EnvironmentHelper, PasswordField } from ".";
 import { Row, Col, Container, Button } from "react-bootstrap"
 import { PersonInterface } from "../helpers/Interfaces";
 
@@ -139,9 +139,7 @@ export const HomeRegister: React.FC = () => {
               <div className="form-group">
                 <input type="text" className="form-control" placeholder="Email" name="email" value={register.email} onChange={handleChange} />
               </div>
-              <div className="form-group">
-                <input type="password" className="form-control" placeholder="Password" name="password" value={register.password} onChange={handleChange} />
-              </div>
+              <PasswordField value={register.password} onChange={handleChange} containerClass="form-group" />
               <Button variant="success" block onClick={handleRegister}>Get Started for Free</Button>
 
             </Col>

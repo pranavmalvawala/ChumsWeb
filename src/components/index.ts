@@ -1,6 +1,6 @@
-export { ErrorMessages, InputBox } from "../appBase/components";
+export { ErrorMessages, InputBox, PasswordField } from "../appBase/components";
 export * from "../appBase/interfaces";
-export * from "../helpers"
-export { Header } from "./Header"
-export { Footer } from "./Footer"
+export * from "../helpers";
+export { Header } from "./Header";
+export { Footer } from "./Footer";
 
