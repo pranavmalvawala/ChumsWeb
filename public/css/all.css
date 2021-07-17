@@ -86,7 +86,9 @@ p.lead {font-size:16px;font-weight: bold;}
 #attendance {position: relative; z-index:-2}
 #attendance:after { content:''; background-position-y: center; background-image: url(/images/home/attendance.jpg); background-size: cover; opacity: 0.10; top: 0;left: 0;bottom: 0;right: 0;position: absolute; z-index: -1; } /*https://pixabay.com/photos/kindergarten-clown-garden-animator-2204239/*/
 
-
+.form-control.is-invalid {
+    background-image: none;
+}
 
 
 @media (min-width: 600px) {
