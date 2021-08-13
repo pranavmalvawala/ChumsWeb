@@ -4,6 +4,7 @@ import { Row, Col, Container, Button, Form } from "react-bootstrap"
 import { PersonInterface } from "../helpers/Interfaces";
 import * as yup from "yup";
 import { Formik, FormikHelpers } from "formik";
+import ReactGA from "react-ga";
 
 const schema = yup.object().shape({
   churchName: yup.string().required("Please enter your church name."),
@@ -39,6 +40,7 @@ export function HomeRegister() {
     // check if user already exist with this email.
     setCustomErrors([]);
 
+    ReactGA.event({ category: "Chums", action: "Register" });
     const loginResp = await createAccess(values);
     if (loginResp != null) {
       const { person }: { person: PersonInterface } = await ApiHelper.post("/churches/init", { user: loginResp.user }, "MembershipApi");
