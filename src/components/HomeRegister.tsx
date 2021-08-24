@@ -19,7 +19,7 @@ export function HomeRegister() {
             <p>You'll be up and running in less than a minute.</p>
 
             <ErrorMessages errors={customErrors} />
-            <Register updateErrors={setCustomErrors} appName="ChurchApps" appUrl={EnvironmentHelper.AppUrl} />
+            <Register updateErrors={setCustomErrors} appName="ChurchApps" appUrl={EnvironmentHelper.AccountsAppUrl} />
           </Col>
         </Row>
       </Container>
