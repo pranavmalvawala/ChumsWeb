@@ -29,6 +29,6 @@ export function HomeRegister() {
           </Grid>
         </Grid>
       </Container>
-    </div >
+    </div>
   );
 }
