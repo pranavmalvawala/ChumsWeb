@@ -1,11 +1,11 @@
+import { Container, Grid } from "@mui/material";
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap"
 
 export const HomeMembers: React.FC = () => (
   <div className="homeSection alt" id="membersSection">
     <Container>
-      <Row>
-        <Col lg={6}>
+      <Grid container spacing={3}>
+        <Grid item md={6} xs={12}>
           <div className="title"><span>Robust Information Tracking</span></div>
           <h2>Members and Groups</h2>
           <ul>
@@ -14,9 +14,9 @@ export const HomeMembers: React.FC = () => (
             <li>You may create an unlimited amount of groups for classes, at-home small groups, or various ministries.</li>
             <li>You can also track attendance on each of these groups, if you choose and see reports showing how your groups are growing over time.</li>
           </ul>
-        </Col>
-        <Col lg={6}><img src="/images/home/members.png" alt="Members" className="img-fluid" /></Col>
-      </Row>
+        </Grid>
+        <Grid item md={6} xs={12}><img src="/images/home/members.png" alt="Members" className="img-fluid" /></Grid>
+      </Grid>
     </Container>
   </div>
 )

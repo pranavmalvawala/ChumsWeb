@@ -1,9 +1,9 @@
 import React from "react";
 import { ErrorMessages, EnvironmentHelper } from ".";
-import { Row, Col, Container } from "react-bootstrap"
 import { Register } from "../appBase/pageComponents/components/Register"
 import ReactGA from "react-ga";
 import { UserInterface } from "../appBase/interfaces";
+import { Container, Grid } from "@mui/material";
 
 export function HomeRegister() {
   const [customErrors, setCustomErrors] = React.useState<string[]>([]);
@@ -14,21 +14,21 @@ export function HomeRegister() {
 
   return (
     <div className="homeSection" id="registerSection">
-      <Container>
+      <Container fixed>
         <div id="register"></div>
 
-        <Row>
-          <Col lg={6} className="d-none d-lg-block"><img src="/images/home/register.png" alt="register" className="img-fluid" /></Col>
-          <Col lg={6}>
+        <Grid container spacing={3}>
+          <Grid item md={6} xs={0}><img src="/images/home/register.png" alt="register" className="img-fluid" /></Grid>
+          <Grid item md={6} xs={12}>
             <div className="title"><span>Join CHUMS</span></div>
             <h2>Register for a Free Account</h2>
             <p>You'll be up and running in less than a minute.</p>
 
             <ErrorMessages errors={customErrors} />
             <Register updateErrors={setCustomErrors} appName="ChurchApps" appUrl={EnvironmentHelper.AccountsAppUrl} userRegisteredCallback={trackRegister} />
-          </Col>
-        </Row>
+          </Grid>
+        </Grid>
       </Container>
-    </div>
+    </div >
   );
 }

@@ -1,12 +1,14 @@
+import { Container, Grid } from "@mui/material";
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap"
 
 export const HomeGiving: React.FC = () => (
   <div className="homeSection" id="givingSection">
-    <Container>
-
-      <Row>
-        <Col lg={{ span: 6, order: 2 }}>
+    <Container fixed>
+      <Grid container spacing={3}>
+        <Grid item md={6} xs={12}>
+          <img src="/images/home/giving.png" alt="giving" className="img-fluid" />
+        </Grid>
+        <Grid item md={6} xs={12}>
           <div className="title"><span>Easy, Quick and Efficient</span></div>
           <h2>Track Giving</h2>
           <ul>
@@ -14,9 +16,8 @@ export const HomeGiving: React.FC = () => (
             <li>You can export giving data to CSV files to easily prepare giving statements.</li>
             <li>Create an unlimited number of funds to track gifts to special causes and view breakdwons of giving over time, either by fund or see the big picture.</li>
           </ul>
-        </Col>
-        <Col lg={{ span: 6, order: 1 }}><img src="/images/home/giving.png" alt="giving" className="img-fluid" /></Col>
-      </Row>
+        </Grid>
+      </Grid>
     </Container>
   </div>
 )
