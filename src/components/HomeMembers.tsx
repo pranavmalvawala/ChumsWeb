@@ -15,7 +15,7 @@ export const HomeMembers: React.FC = () => (
             <li>You can also track attendance on each of these groups, if you choose and see reports showing how your groups are growing over time.</li>
           </ul>
         </Grid>
-        <Grid item md={6} xs={12}><img src="/images/home/members.png" alt="Members" className="img-fluid" /></Grid>
+        <Grid item md={6} xs={12}><img src="/images/home/members.png" alt="Members" /></Grid>
       </Grid>
     </Container>
   </div>

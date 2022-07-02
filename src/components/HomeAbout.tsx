@@ -4,9 +4,9 @@ import React from "react";
 export const HomeAbout: React.FC = () => (
   <div className="homeSection alt" id="aboutSection">
     <Container fixed>
-      <Grid container spacing={3}>
+      <Grid container>
         <Grid item md={2} sm={0}></Grid>
-        <Grid item md={8} xs={12} className="text-center">
+        <Grid item md={8} xs={12} sx={{textAlign: "center"}}>
           <div className="title"><span>Chu</span>rch <span>M</span>anagement <span>S</span>oftware</div>
           <h2>About CHUMS</h2>
           <p className="lead">CHUMS is a completely free service provided to Christian churches and ministries.</p>

@@ -9,6 +9,11 @@
 
 a {
   color: #24b8ff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
 }
 
 h2 span {
@@ -25,8 +30,8 @@ h2 span {
 
 #navbar {
   background-color: #FFF !important;
-  height: 55px;
   margin-bottom: 20px;
+  padding: 11px 0;
   box-shadow: 0px 3px 3px 0px #999;
 }
 
@@ -34,6 +39,7 @@ h2 span {
   color: #000;
   font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 #navbar .nav-item {
@@ -78,6 +84,16 @@ h2 span {
 
 #navSpacer {
   height: 57px;
+}
+
+.logo {
+  display: flex;
+  margin-right: 20px;
+}
+
+.logo img {
+  max-width: 200px;
+  width: 100%;
 }
 
 .homeSection {
@@ -132,7 +148,7 @@ h2 span {
 }
 
 #hero {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 
@@ -162,25 +178,6 @@ h2 span {
   margin-bottom: 25px;
   min-height: 200px;
   border-radius: 10px;
-}
-
-.homeFeature .icon {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.homeFeature .icon span {
-  border: 3px solid #03a9f4;
-  border-radius: 50%;
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-}
-
-.homeFeature .icon i {
-  color: #00ad25;
-  font-size: 25px;
-  line-height: 55px;
 }
 
 .homeFeature .feature {
