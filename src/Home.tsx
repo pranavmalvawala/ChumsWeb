@@ -9,6 +9,7 @@ import { HomeGiving } from "./components/HomeGiving";
 import { HomeAttendance } from "./components/HomeAttendance";
 import { HomeExport } from "./components/HomeExport";
 import { HomeTestimony } from "./components/HomeTestimony";
+import { FloatingSupport } from "./appBase/components";
 
 export const Home = () => (
   <>
@@ -21,8 +22,8 @@ export const Home = () => (
     <HomeAttendance />
     <HomeExport />
     <HomeTestimony />
-
     <HomeRegister />
     <Footer />
+    <FloatingSupport appName="Chums" />
   </>
 )
