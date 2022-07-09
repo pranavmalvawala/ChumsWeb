@@ -1,14 +1,15 @@
 import React from "react";
-import { Footer, Header } from "./components"
+import { Footer, Header } from "./components";
+import { Container, Box } from "@mui/material";
 
 export const Terms = () => (
   <>
     <Header />
-    <div className="container">
-      <div className="text-center" style={{ marginBottom: 50, marginTop: 30 }}>
+    <Container className="terms">
+      <Box sx={{textAlign: "center", margin: "30px 0 50px"}}>
         <h1>Terms and Conditions</h1>
         <p>Last updated: September 19, 2020</p>
-      </div>
+      </Box>
       <p>Please read these terms and conditions carefully before using Our Service.</p>
       <h2>Interpretation and Definitions</h2>
       <h3>Interpretation</h3>
@@ -92,7 +93,7 @@ export const Terms = () => (
         <li>By email: support@livecs.org</li>
       </ul>
 
-    </div>
+    </Container>
     <Footer />
   </>
 )

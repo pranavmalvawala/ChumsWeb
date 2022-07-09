@@ -17,7 +17,7 @@ export const HomeAttendance: React.FC = () => (
             <li>All check-in information is automatically entered into the attendance system, freeing up time that your office staff would otherwise spend having to manually track attendance.</li>
           </ul>
         </Grid>
-        <Grid item md={6} xs={12}><img src="/images/home/checkin.png" alt="check in" className="img-fluid" /></Grid>
+        <Grid item md={6} xs={12}><img src="/images/home/checkin.png" alt="check in" /></Grid>
       </Grid>
     </Container>
   </div>

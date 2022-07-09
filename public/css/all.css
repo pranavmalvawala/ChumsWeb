@@ -16,6 +16,14 @@ img {
   width: 100%;
 }
 
+.text-decoration {
+  text-decoration: none;
+}
+
+.text-decoration:hover {
+  text-decoration: underline;
+}
+
 h2 span {
   color: #24b8ff;
 }
@@ -255,11 +263,34 @@ p.lead {
   border-color: #03a9f4;
 }
 
+.terms h1,
+.terms h2,
+.terms h3 {
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
 
+.terms h1 {
+  font-size: 40px;
+}
 
+.terms h2 {
+  font-size: 32px;
+}
 
+.terms h2 {
+  font-size: 28px;
+}
 
+.terms p {
+  margin: 0 0 16px 0;
+}
 
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
 
 #footer {
   background-color: #002a3e;

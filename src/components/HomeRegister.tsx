@@ -18,7 +18,7 @@ export function HomeRegister() {
         <div id="register"></div>
 
         <Grid container spacing={3}>
-          <Grid item md={6} xs={0}><img src="/images/home/register.png" alt="register" className="img-fluid" /></Grid>
+          <Grid item md={6} xs={0}><img src="/images/home/register.png" alt="register" /></Grid>
           <Grid item md={6} xs={12}>
             <div className="title"><span>Join CHUMS</span></div>
             <h2>Register for a Free Account</h2>

@@ -6,7 +6,7 @@ export const HomeExport: React.FC = () => (
     <Container>
       <Grid container spacing={3}>
         <Grid item md={6}>
-          <img src="/images/home/export.png" alt="import and export" className="img-fluid" />
+          <img src="/images/home/export.png" alt="import and export" />
         </Grid>
         <Grid item md={6}>
           <div className="title"><span>Import and Export</span></div>

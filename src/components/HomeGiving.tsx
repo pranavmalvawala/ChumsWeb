@@ -6,7 +6,7 @@ export const HomeGiving: React.FC = () => (
     <Container fixed>
       <Grid container spacing={3}>
         <Grid item md={6} xs={12}>
-          <img src="/images/home/giving.png" alt="giving" className="img-fluid" />
+          <img src="/images/home/giving.png" alt="giving" />
         </Grid>
         <Grid item md={6} xs={12}>
           <div className="title"><span>Easy, Quick and Efficient</span></div>
